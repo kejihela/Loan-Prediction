@@ -10,7 +10,7 @@ from prediction_model.predict import make_prediction
 import pandas as pd
 import os
 
-'''This is like a comment, the next commment'''
+'''This is like a comment, the next commment, Alright'''
 app = FastAPI(
 title="Loan Prediction Model API",
 description="A simple API that uses ML model to predict the Loan application status",
