@@ -24,17 +24,17 @@ allow_methods=["*"],
 allow_headers=["*"], )
 
 class LoanPred(BaseModel):
-Gender: str
-Married: str
-Dependents: str
-Education: str
-Self_Employed: str
-ApplicantIncome: float
-CoapplicantIncome: float
-LoanAmount: float
-Loan_Amount_Term: float
-Credit_History: float
-Property_Area: str
+    Gender: str
+    Married: str
+    Dependents: str
+    Education: str
+    Self_Employed: str
+    ApplicantIncome: float
+    CoapplicantIncome: float
+    LoanAmount: float
+    Loan_Amount_Term: float
+    Credit_History: float
+    Property_Area: str
 
 @app.get('/')
 def index():
