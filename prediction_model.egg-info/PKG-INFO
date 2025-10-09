@@ -1,0 +1,56 @@
+Metadata-Version: 2.4
+Name: prediction_model
+Version: 0.0.0
+Summary: Train and deploy prediction model.
+Home-page: https://github.com/kejihela/Loan-Prediction
+Author: Adebayo Keji
+Author-email: Gleebayour@gmail.com
+License: MIT
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: setuptools>=65.0.0
+Requires-Dist: wheel>=0.38.0
+Requires-Dist: joblib==1.3.2
+Requires-Dist: numpy>=1.23.0
+Requires-Dist: pandas>=1.5.0
+Requires-Dist: scikit-learn>=1.2.0
+Requires-Dist: scipy>=1.9.0
+Requires-Dist: pytest>=7.0.0
+Requires-Dist: fastapi<1.0.0,>=0.95.0
+Requires-Dist: pydantic<2.0.0,>=1.10.0
+Requires-Dist: uvicorn<0.25.0,>=0.20.0
+Requires-Dist: gunicorn>=20.1.0
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: license
+Dynamic: license-file
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+
+MANIFEST.in
+# A MANIFEST.in file consists of commands, one per line, instructing setuptools to add
+# or remove a set of files from the sdist (source distribution)
+
+config.py
+# A configuration module contains constant variables, the path to the directories, and initial 
+
+data_management.py
+# This module contains functions required for loading the data, saving serialized ML
+# model, and loading deserialized ML model using joblib.
+
+preprocessor.py
+# This module holds all the fit and transform functions required by the sklearn pipeline:
+

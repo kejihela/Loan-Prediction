@@ -7,8 +7,8 @@ from sklearn.linear_model import LogisticRegression
 from prediction_model.config import config
 import prediction_model.processing.preprocessors as pp
 
-loan_pipe=Pipeline([('Numerical Imputer',pp.NumericalImputer(variables=config. NUMERICAL_FEATURES)),
-                    'Categorical Imputer',pp.CategoricalImputer(variables=config.CATEGORICAL_FEATURES)),
+loan_pipe=Pipeline([('Numerical Imputer',pp.NumericalImputer(variables=config.NUMERICAL_FEATURES)),
+                    ('Categorical Imputer',pp.CategoricalImputer(variables=config.CATEGORICAL_FEATURES)),
                     ('Temporal Features',pp.TemporalVariableEstimator(variables=config.TEMPORAL_FEATURES, reference_variable=config.TEMPORAL_ADDITION)),
                     ('Categorical Encoder', pp.CategoricalEncoder(variables=config.FEATURES_TO_ENCODE)),
                     ('Log Transform', pp.LogTransformation(variables=config.LOG_FEATURES)),

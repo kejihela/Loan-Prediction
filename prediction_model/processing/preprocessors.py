@@ -36,7 +36,7 @@ class CategoricalImputer(BaseEstimator,TransformerMixin):
     def transform(self, X):
         X=X.copy()
         for feature in self.variables:
-        X[feature].fillna(self.imputer_dict_[feature],inplace=True)
+            X[feature].fillna(self.imputer_dict_[feature],inplace=True)
         return X
     
 class CategoricalEncoder(BaseEstimator,TransformerMixin):
