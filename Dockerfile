@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 EXPOSE 8005
 
-WORKDIR /code/src
+WORKDIR /code/
 
 ENV PYTHONPATH "${PYTHONPATH}:/code/"
 
