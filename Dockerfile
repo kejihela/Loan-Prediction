@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
 
 COPY . /code
 
-RUN chmod +x /code/src
+RUN chmod +x /code/
 
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
@@ -15,6 +15,6 @@ EXPOSE 8005
 
 WORKDIR /code/src
 
-ENV PYTHONPATH "${PYTHONPATH}:/code/src"
+ENV PYTHONPATH "${PYTHONPATH}:/code/"
 
 CMD pip install -e .
