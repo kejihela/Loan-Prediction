@@ -10,15 +10,13 @@ def load_dataset(file_name):
     return _data
 
 def save_pipeline(pipeline_to_save):
-    save_file_name = 'trained_models/classification_v1.pkl'
+    save_file_name = 'classification_v1.pkl'
     save_path = os.path.join(config.SAVED_MODEL_PATH, save_file_name)
-    print(save_path)
     joblib.dump(pipeline_to_save, save_path)
     print("Save pipeline", save_file_name)
 
 def load_pipeline(pipeline_to_load):
     save_path = os.path.join(config.SAVED_MODEL_PATH, pipeline_to_load)
-    print(save_path)
     trained_model = joblib.load(save_path)
     print("Pipeline Loaded", pipeline_to_load)
     return trained_model
