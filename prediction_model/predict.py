@@ -18,4 +18,6 @@ def make_prediction(input_data):
 
     # prediction
     prediction = _loan_pipe.predict(data[config.FEATURES])
-    return prediction
+    output = np.where(prediction==1, 'Y', 'N').tolist()
+    results = {'prediction': output}
+    return results

@@ -88,6 +88,7 @@ def get_loan_details(Gender: str, Married: str, Dependents: str,
         pred = 'Approved'
     else:
         pred = 'Rejected'
+        
     return {'status':pred}
 if __name__ == '__main__':
     uvicorn.run(app)
