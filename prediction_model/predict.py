@@ -18,6 +18,9 @@ def make_prediction(input_data):
 
     # prediction
     prediction = _loan_pipe.predict(data[config.FEATURES])
-    output = np.where(prediction==1, 'Y', 'N').tolist()
-    results = {'prediction': output}
-    return results
+    if prediction == 1:
+        pred = "Approved"
+    else:
+        pred = "Rejected"
+   
+    return pred
