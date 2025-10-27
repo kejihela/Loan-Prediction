@@ -12,5 +12,5 @@ data_management.py
 preprocessor.py
 # This module holds all the fit and transform functions required by the sklearn pipeline:
 
-dependencies
+This model was deployed using FASTAPI
 
